@@ -5,7 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kashish Shaikh</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Kashish Shaikh, AI and Data Science graduate. Data science, analytics and ML engineering.">
+<meta name="description" content="Kashish Shaikh, AI and Data Science graduate building data science, ML and AI agent projects. Meta PyTorch OpenEnv Hackathon finalist, published researcher, open to full-time roles.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kashishshaikh007.github.io/">
+<meta property="og:title" content="Kashish Shaikh Portfolio">
+<meta property="og:description" content="AI & Data Science graduate building data science, ML and AI agent projects. Meta PyTorch OpenEnv Hackathon finalist, published researcher, open to full-time roles.">
+<meta property="og:image" content="https://kashishshaikh007.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -131,10 +139,12 @@ ul.pts li{max-width:68ch}
 .certs{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 
 /* Projects */
-.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.projects{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.projects>.proj{grid-column:span 2}
 .proj{display:flex;flex-direction:column;gap:14px;border:1px solid var(--line);border-radius:16px;padding:26px;background:var(--bg);transition:border-color .2s,transform .2s}
 .proj:hover{border-color:var(--fg)}
-.proj.feature{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 40px;background:var(--card)}
+.projects>.proj.feature{grid-column:1/-1}
+.proj.feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 40px;background:var(--card)}
 .proj.feature .head{grid-column:1/-1}
 .ptop{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font:500 12px/1 var(--f-mono);color:var(--muted);letter-spacing:.04em}
 .tag-strong{background:var(--accent);color:var(--on-accent);padding:5px 8px;border-radius:5px}
@@ -178,12 +188,16 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
   .about{grid-template-columns:1fr}
   .skills{grid-template-columns:repeat(2,minmax(0,1fr))}
   .proj.feature{grid-template-columns:1fr}
+  .projects>.proj{grid-column:span 3}
+  .projects>.proj:last-child{grid-column:1/-1}
   .hack{grid-template-columns:1fr;gap:14px}
   .hack .stat{text-align:left}
   .stat .of{margin-left:0}
 }
 @media (max-width:640px){
-  .projects,.awards-row,.skills{grid-template-columns:1fr}
+  .awards-row,.skills{grid-template-columns:1fr}
+  .projects{grid-template-columns:1fr}
+  .projects>.proj,.projects>.proj:last-child{grid-column:1/-1}
   .item{grid-template-columns:1fr;gap:8px}
   section{padding-block:56px}
   .proj{padding:22px}
@@ -405,6 +419,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
           <div class="award"><span>1st · KSSEM Project Exhibition</span><span>3rd · National-Level Expo, CMRIT</span></div>
           <div class="chips"><span class="chip">Python</span><span class="chip">LightGBM</span><span class="chip">Scikit-learn</span><span class="chip">FastAPI</span><span class="chip">React</span><span class="chip">Chrome Extensions</span></div>
           <div class="links">
+            <a class="link" href="https://phish-net-ai.vercel.app/" target="_blank" rel="noopener">Live demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
             <a class="link" href="https://github.com/kashishshaikh007/PhishNet-AI-main" target="_blank" rel="noopener">Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
           </div>
         </div>
@@ -433,6 +448,18 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
         </ul>
         <div class="chips"><span class="chip">Whisper</span><span class="chip">Sentence-transformers</span><span class="chip">Pandas</span><span class="chip">openpyxl</span></div>
         <div class="links"><a class="link" href="https://github.com/kashishshaikh007/autoeit-07" target="_blank" rel="noopener">Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+
+      <article class="proj">
+        <div class="ptop"><span class="tag-soft">2024</span><span class="tag-soft">Health ML</span><span class="tag-soft">JITHACK '24</span></div>
+        <h3>PCOD Risk &amp; Cycle Platform</h3>
+        <p class="desc">Predicts PCOD risk, tracks the current menstrual phase and next period, and suggests diet and exercise for each phase.</p>
+        <ul class="pts">
+          <li>XGBoost risk model (AUC 0.89) with SMOTE to handle class imbalance and explainable predictions.</li>
+          <li>Flask web app with a session-only form, so user health data is never stored.</li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">XGBoost</span><span class="chip">SMOTE</span><span class="chip">Flask</span></div>
+        <div class="links"><a class="link" href="https://github.com/kashishshaikh007/MenstrualCycleDietExercise" target="_blank" rel="noopener">Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
       </article>
 
     </div>
@@ -464,6 +491,8 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
     <div class="awards-row">
       <div class="mini"><div class="place">1st</div><div><b>KSSEM Project Exhibition</b><span>Dept. of AI &amp; DS · PhishNet AI</span></div></div>
       <div class="mini"><div class="place">3rd</div><div><b>National-Level Project Exhibition</b><span>CMRIT · PhishNet AI</span></div></div>
+      <div class="mini"><div class="place">'24</div><div><b>JITHACK '24</b><span>PCOD risk prediction from real patient data</span></div></div>
+      <div class="mini"><div class="place">'24</div><div><b>HACKATHON-24</b><span>Study-material recommender for KCET students</span></div></div>
     </div>
   </section>
 
